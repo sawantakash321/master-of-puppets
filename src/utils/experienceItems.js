@@ -1,0 +1,1 @@
+export default ['<1 year', '1-3 years', '3-5 years', '5-7 years', '7+ years'];
