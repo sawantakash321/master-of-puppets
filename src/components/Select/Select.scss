@@ -1,0 +1,54 @@
+$select-bg-color: #ffffff;
+
+.select {
+  display: inline-block;
+
+  position: relative;
+
+  select {
+    display: inline-block;
+    padding: 18px 20px 18px 15px;
+    border: solid 1px #333366;
+    border-radius: 3px;
+    width: 100%;
+    background-color: $select-bg-color;
+
+    // This is the empty option element that serves as placeholder
+    option.placeholder {
+      color: lightgrey;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    border: solid 1px #333366;
+    border-left: none;
+    background-color: $select-bg-color;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    border-top: solid 10px #333366;
+    border-bottom: solid 10px transparent;
+    transform: translateY(-4px);
+    pointer-events: none;
+  }
+
+  &.open::after {
+    transform: rotateX(180deg) translateY(16px);
+  }
+}
