@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "id": 124,
+      "name": "Express.js",
+      "experience": "4 years"
+    },
+    {
+      "id": 125,
+      "name": "GraphQL",
+      "experience": "< 1 Year"
+    },
+    {
+      "name": "Javascript",
+      "experience": "<1 year",
+      "id": 127
+    },
+    {
+      "name": "NodeJS",
+      "experience": "3-5 years",
+      "id": 130
+    },
+    {
+      "name": "Postgres",
+      "experience": "7+ years",
+      "id": 131
+    },
+    {
+      "name": "AWS",
+      "experience": "1-3 years",
+      "id": 133
+    }
+  ]
+}
