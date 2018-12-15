@@ -1,14 +1,163 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  font-family: sans-serif; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+:root {
+  font-size: 16px; }
+
+.btn {
+  color: #ffffff;
+  background-color: #34495e;
+  border-radius: 3px;
+  padding: 20px;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .btn.disabled {
+    pointer-events: none;
+    background-color: #ececec;
+    color: #cdcdcd; }
+  .btn:disabled {
+    background-color: #ececec;
+    color: #cdcdcd; }
+  .btn:hover:not(:disabled), .btn:active:not(:disabled) {
+    background-color: #617181; }
+  .btn.active, .btn.hover {
+    background-color: #617181; }
+
+.red-text {
+  color: #f44336; }
+
+input {
+  padding: 18px 15px;
+  border-radius: 3px;
+  border: solid 1px #34495e; }
+  input:invalid {
+    border: solid 1px #f44336; }
+
+.align-center {
+  text-align: center; }
+
+.form-label {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  display: inline-block;
+  font-weight: bold; }
+
+.inline-form {
+  display: block; }
+  .inline-form .btn,
+  .inline-form .select,
+  .inline-form input,
+  .inline-form select {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 10px; }
+    .inline-form .btn:last-child,
+    .inline-form .select:last-child,
+    .inline-form input:last-child,
+    .inline-form select:last-child {
+      margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .inline-form .btn,
+    .inline-form .select,
+    .inline-form input {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: auto;
+      margin-bottom: 0; }
+      .inline-form .btn:first-child,
+      .inline-form .select:first-child,
+      .inline-form input:first-child {
+        margin-left: 0; }
+      .inline-form .btn:last-child,
+      .inline-form .select:last-child,
+      .inline-form input:last-child {
+        margin-right: 0; }
+    .inline-form .select,
+    .inline-form input,
+    .inline-form select {
+      min-width: 250px;
+      max-width: 500px; } }
+
+.d-none {
+  display: none !important; }
+
+.page {
+  padding: 90px 40px; }
+
+.skills {
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start; }
+  .skills::before, .skills::after {
+    content: ' ';
+    display: table; }
+  .skills .skill {
+    position: relative;
+    text-align: start;
+    display: flex;
+    border: solid 3px #f4f5f6;
+    border-radius: 3px;
+    margin: 5px;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .skills .skill {
+        width: auto;
+        min-width: 250px; } }
+    .skills .skill:nth-child(1) .skill-number,
+    .skills .skill:nth-child(2) .skill-number,
+    .skills .skill:nth-child(3) .skill-number,
+    .skills .skill:nth-child(4) .skill-number,
+    .skills .skill:nth-child(5) .skill-number {
+      background-color: #25333c; }
+    .skills .skill .skill-number {
+      background-color: #80878b;
+      color: white;
+      padding: 8px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    .skills .skill .skill-content {
+      padding: 20px;
+      width: 100%; }
+      .skills .skill .skill-content .skill-name {
+        margin-bottom: 14px;
+        font-weight: bold; }
+      .skills .skill .skill-content .skill-experience {
+        color: #667075; }
+    .skills .skill .skill-remove {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      color: #bec2c5;
+      font-weight: bolder;
+      font-size: 30px;
+      display: none; }
+      .skills .skill .skill-remove .remove-sign {
+        display: inline-block;
+        transform: rotateZ(45deg); }
+    .skills .skill:hover .skill-number,
+    .skills .skill:focus .skill-number,
+    .skills .skill:focus-within .skill-number {
+      background-color: #1a998e; }
+    .skills .skill:hover .skill-remove,
+    .skills .skill:focus-within .skill-remove {
+      display: block; }
+    .skills .skill.hover .skill-number {
+      background-color: #1a998e; }
+    .skills .skill.hover .skill-remove {
+      display: block; }

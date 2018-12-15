@@ -1,0 +1,9 @@
+@import 'variables';
+
+@mixin prevent-collapse() {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+}

@@ -1,0 +1,97 @@
+@import 'mixins';
+
+.page {
+  padding: $page-size;
+}
+
+.skills {
+  padding: 0;
+  margin: $spacing 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  @include prevent-collapse();
+
+  .skill {
+    position: relative;
+    text-align: start;
+    display: flex;
+    border: solid $skill-border-width $skill-border;
+    border-radius: $border-radius;
+    margin: 5px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      min-width: 250px;
+    }
+
+    &:nth-child(1) .skill-number,
+    &:nth-child(2) .skill-number,
+    &:nth-child(3) .skill-number,
+    &:nth-child(4) .skill-number,
+    &:nth-child(5) .skill-number {
+      background-color: $skill-relevant-number;
+    }
+
+    .skill-number {
+      background-color: $skill-regular-number;
+      color: white;
+      padding: 8px;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    .skill-content {
+      padding: $spacing;
+      width: 100%;
+
+      .skill-name {
+        margin-bottom: 14px;
+        font-weight: bold;
+      }
+
+      .skill-experience {
+        color: $skill-experience;
+      }
+    }
+
+    .skill-remove {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      color: $skill-remove-color;
+      font-weight: bolder;
+      font-size: $skill-remove-size;
+      display: none;
+
+      .remove-sign {
+        display: inline-block;
+        transform: rotateZ(45deg);
+      }
+    }
+
+    &:hover .skill-number,
+    &:focus .skill-number,
+    &:focus-within .skill-number {
+      background-color: $skill-hover-number;
+    }
+
+    &:hover .skill-remove,
+    &:focus-within .skill-remove {
+      display: block;
+    }
+
+    &.hover .skill-number {
+      background-color: #1a998e;
+    }
+
+    &.hover .skill-remove {
+      display: block;
+    }
+  }
+}

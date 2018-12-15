@@ -1,0 +1,107 @@
+@import 'variables';
+
+.btn {
+  color: $btn-text-color;
+  background-color: $btn-color;
+  border-radius: $border-radius;
+  padding: $spacing;
+  border: none;
+  text-transform: $text-transform;
+  text-decoration: none;
+
+  &.disabled {
+    pointer-events: none;
+    background-color: $btn-disabled;
+    color: $btn-disabled-text;
+  }
+
+  &:disabled {
+    background-color: $btn-disabled;
+    color: $btn-disabled-text;
+  }
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: $btn-light;
+  }
+
+  &.active,
+  &.hover {
+    background-color: $btn-light;
+  }
+}
+
+.red-text {
+  color: $red-color;
+}
+
+input {
+  padding: 18px 15px;
+  border-radius: $border-radius;
+  border: $input-border;
+
+  &:invalid {
+    border: solid $border-width $red-color;
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.form-label {
+  text-transform: $text-transform;
+  margin-bottom: $spacing * 2;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.inline-form {
+  display: block;
+
+  .btn,
+  .select,
+  input,
+  select {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    margin-bottom: $spacing / 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .btn,
+    .select,
+    input {
+      margin-left: $spacing;
+      margin-right: $spacing;
+      width: auto;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .select,
+    input,
+    select {
+      min-width: 250px;
+      max-width: 500px;
+    }
+  }
+}
+
+.d-none {
+  display: none !important;
+}

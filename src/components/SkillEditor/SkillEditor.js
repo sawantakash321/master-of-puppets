@@ -24,10 +24,8 @@ class SkillEditor extends Component {
 
   render() {
     const { values, isSubmitting, isLoading, skills, actions } = this.props;
-
     const validName =
       values.name && values.name.length >= 4 && values.name.length <= 255;
-
     const canSubmit =
       validName && values.experience && !isSubmitting && !isLoading;
 
