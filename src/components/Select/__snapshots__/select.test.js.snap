@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select component matches the snapshot 1`] = `
+<div
+  className="select"
+>
+  <select
+    id="select"
+    name="select"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    value="first option"
+  >
+    <option
+      className="placeholder"
+      value=""
+    >
+      placeholder
+    </option>
+    <option
+      value="first option"
+    >
+      first option
+    </option>
+    <option
+      value="second option"
+    >
+      second option
+    </option>
+  </select>
+</div>
+`;

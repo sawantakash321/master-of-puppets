@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design page matches the snapshot 1`] = `
+<div
+  className="page"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="form-label"
+      htmlFor="skill"
+    >
+      Add your skills
+    </label>
+    <div
+      className="inline-form"
+    >
+      <input
+        className="invalid"
+        id="skill"
+        maxLength={255}
+        minLength={4}
+        name="skill"
+        onChange={[Function]}
+        placeholder="Node JS, Postgres, React, etc."
+        type="text"
+        value={undefined}
+      />
+      <div
+        className="select"
+      >
+        <select
+          id="experience"
+          name="experience"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          value={undefined}
+        >
+          <option
+            className="placeholder"
+            value=""
+          >
+            Experience
+          </option>
+          <option
+            value="<1 year"
+          >
+            &lt;1 year
+          </option>
+          <option
+            value="1-3 years"
+          >
+            1-3 years
+          </option>
+          <option
+            value="3-5 years"
+          >
+            3-5 years
+          </option>
+          <option
+            value="5-7 years"
+          >
+            5-7 years
+          </option>
+          <option
+            value="7+ years"
+          >
+            7+ years
+          </option>
+        </select>
+      </div>
+      <button
+        className="btn"
+        disabled={true}
+        type="submit"
+      >
+        Add your skills
+      </button>
+    </div>
+  </form>
+  <ul
+    className="skills"
+  />
+</div>
+`;
