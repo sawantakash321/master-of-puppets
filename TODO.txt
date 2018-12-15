@@ -1,0 +1,8 @@
+Add comments
+Versioning
+Move to second draft
+jest snapshot testing
+react-test-renderer Enzyme
+try with ducks-modular-redux on a new branch to see how kea differ
+CSS ARIA Compatibility
+Add CSS resets
